@@ -20,7 +20,7 @@ function Notes({ chapters }) {
 
   
   return(
-    <div className="bg-[#C0B9DD] h-screen">
+    <div className="bg-[#C0B9DD] min-h-screen">
     <Script
         type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
       ></Script>
@@ -30,7 +30,7 @@ function Notes({ chapters }) {
             </div>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
         {isSidebarOpen && (
-          <div  className='ml-3 mt-5 px-3 rounded-xl bg-[#DED9E2]' style={{ height: '1000px', width: '250px', background: '' }}>
+          <div  className='ml-3 mt-5 px-3 rounded-xl bg-[#DED9E2]' style={{ height: '100%', width: '250px', background: '' }}>
             <button className='mt-3' onClick={handleToggleSidebar}>
               <img className='h-6 w-6 rounded-full' src='/menu.png' alt="Toggle Sidebar" />
             </button>
