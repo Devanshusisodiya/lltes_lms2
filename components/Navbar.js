@@ -9,15 +9,15 @@ function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div>
-			<nav className=" font-inter fixed w-full z-10 bg-[#C0B9DD]">
+			<nav className=" font-inter fixed w-full z-10 bg-[#e8f1f2]">
 				<div className="w-full">
 					<div className="flex items-center h-20 w-full">
 						<div className="flex items-center  mx-20  justify-between w-full">
 							<div className="flex justify-center items-center flex-shrink-0 ">
-								<img className="ml-10 object-center mt-1 p-2 xl:h-[80px] xl:w-[80px] h-[70px] w-[70px]" 
-                src="/logo2.png"/>
+								<img className="ml-10 object-center mt-1 p-2 xl:h-[60px] xl:w-[60px] h-[60px] w-[60px]" 
+                src="/new_logo.png"/>
                 <h1 className=" xl:visible text-center font-bold xl:text-3xl cursor-pointer text-lg">
-                Rahul<span className="text-[#7F56D9]">Arora</span> 
+                Rahul<span className="text-blue-500">Arora</span> 
 								</h1>
 							</div>
                             <div>
@@ -26,13 +26,13 @@ function Navbar() {
 							<div className="hidden md:block">
 								<div className="ml-10 flex items-baseline space-x-4">
 									<Link href='/'
-										className="cursor-pointer text-[#7F56D9] font-semibold px-3 py-2 text-md hover:font-black"
+										className="cursor-pointer text-blue-500 font-semibold px-3 py-2 text-md hover:font-black"
 									>	
 										Home
 									</Link>
 									<Link
 										href='#About'
-										className="cursor-pointer hover:bg-[#7F56D9] text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-500 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 									>
 										About
 									</Link>
@@ -40,26 +40,26 @@ function Navbar() {
 
 									<Link
 										href='/courses'
-										className="cursor-pointer hover:bg-[#7F56D9] text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-500 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 									>
 										Courses
 									</Link>
 									<Link
 										href='#About'
-										className="cursor-pointer hover:bg-[#7F56D9] text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-500 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 									>
 										Live Classes
 									</Link>
 									<Link
 										href='#About'
-										className="cursor-pointer hover:bg-[#7F56D9] text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+										className="cursor-pointer hover:bg-blue-500 text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 									>
 										NCERT Solutions
 									</Link>
 
 									<Link
 										href='#contact'
-										className="cursor-pointer bg-[#7F56D9] text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
+										className="cursor-pointer bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-black"
 									>
 										Contact
 									</Link>

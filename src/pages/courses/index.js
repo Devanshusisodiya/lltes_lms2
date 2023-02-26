@@ -31,9 +31,9 @@ const stagger = {
 
 function Courses({ courses }) {
     return (
-      <div  className=" bg-[#C0B9DD] h-screen snap-mandatory snap-start ">
+      <div  className=" bg-[#e8f1f2] h-screen snap-mandatory snap-start ">
       <Navbar />
-      {/* indent this out to remove bg image  */}
+{/* 
       <div className="mt-10 ml-4" style={{
         position: "absolute",
         left: 100,
@@ -49,25 +49,70 @@ function Courses({ courses }) {
         width: "90%",
         
         filter: "blur(4px)"}}>
-      </div>
-      {/* till here */}
+      </div> */}
+
       <motion.div className="flex  items-center "  style={{ position: "relative" }}> 
       
         
       
       <div className="  p-3 mt-16 mx-auto" >
       
-      <h2 className="text-6xl font-display text-center"><span className="text-[#7F56D9] uppercase text-6xl  ">
+      <h2 className="text-6xl font-display mt-3 text-center"><span className="text-blue-500 uppercase text-8xl  ">
         C</span>
       <span className="">ourses</span></h2>  
-      <p className="text-gray-700 text-centerfont-red mt-2 max-w-md mx-auto">
-      <span className="text-[#7F56D9] text-2xl font-display font-semibold">L</span>orem ipsum dolor sit amet, 
+      <p className="text-gray-700 text-center text-xl font-red mt-2 justify-center max-w-[1000px] mx-auto">
+      <span className="text-blue-500 text-3xl font-display font-semibold">L</span>orem ipsum dolor sit amet, 
       consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </p>
       
-      <ul className="list-none p-3  mx-auto z-10 mt-1 space-y-10" style={{ maxWidth: 1000 }}>
-          <motion.div variants={stagger} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "4rem" }} >
+      <ul className="my-page container list-none p-3  mx-auto z-10 mt-1 space-y-10" style={{ maxWidth: 1000 }}>
+          <motion.div variants={stagger} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1rem" }} >
+          <AnimatePresence>
+                {courses.map((course) => (
+                  <Link key={course.id} href={`/courses/${course.id}`}>
+                    <motion.li
+                      key={course.id}
+                      initial={{ opacity: 0, y: 50 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 50 }}
+                      transition={{ duration: 0.3 }}
+                      whileHover={{
+                        position: "relative",
+                        zIndex: 1,
+                        scale: [0.9, 1.1],
+                        transition: {
+                          duration: 0.2,
+                        },
+                      }}
+                      className="w-full object-center max-w-sm shadow shadow-slate-300 border border-slate-300 bg-[#F7F4EA] 
+                      opacity-80 rounded-lg my-8 flex flex-col items-center space-y-4"
+                      style={{ minWidth: "30px", height: "30px" }}
+                    >
+                        {/* <motion.img
+                          whileTap={{
+                            scale: 0.7,
+                            rotate: -360,
+                            borderRadius: "120%",
+                          }}
+                          src={`/${course.id}.png`}
+                          alt={course.name}
+                          className="w-[150px] h-[150px] my-4"
+                        /> */}
+                      <div className="flex-1 mt-1">
+                        <h3 className="text-sm font-display font-bold text-center">
+                          {course.name}
+                        </h3>
+                      </div>
+                    </motion.li>
+                  </Link>
+                ))}
+              </AnimatePresence>
+          </motion.div>
+        </ul>
+        <div className="item-centre">
+        <ul className="list-none   mx-auto object-center px-10 mr-80 mt-1 item-center" style={{ maxWidth: 1000 }}>
+          <motion.div variants={stagger} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1rem" }} >
           <AnimatePresence>
                 {courses.map((course) => (
                   <Link key={course.id} href={`/courses/${course.id}`}>
@@ -86,20 +131,20 @@ function Courses({ courses }) {
                         },
                       }}
                       className="w-full object-center max-w-sm shadow-2xl bg-[#F7F4EA] opacity-80 rounded-lg my-8 flex flex-col items-center space-y-4"
-                      style={{ minWidth: "200px", height: "250px" }}
+                      style={{ minWidth: "300px", height: "200px" }}
                     >
-                      <motion.img
-                        whileTap={{
-                          scale: 0.7,
-                          rotate: -360,
-                          borderRadius: "120%",
-                        }}
-                        src={`/${course.id}.png`}
-                        alt={course.name}
-                        className="w-[150px] h-[150px] my-4"
-                      />
-                      <div className="flex-1 mt-2 text-center">
-                        <h3 className="text-2xl font-display font-bold">
+                        {/* <motion.img
+                          whileTap={{
+                            scale: 0.7,
+                            rotate: -360,
+                            borderRadius: "120%",
+                          }}
+                          src={`/${course.id}.png`}
+                          alt={course.name}
+                          className="w-[150px] h-[150px] my-4"
+                        /> */}
+                      <div className="flex-1 py-8 mt-8">
+                        <h3 className="text-2xl mt-5 font-display font-bold text-center">
                           {course.name}
                         </h3>
                       </div>
@@ -109,9 +154,9 @@ function Courses({ courses }) {
               </AnimatePresence>
           </motion.div>
         </ul>
-        {/* <div style={{ position: "relative", left: '3%', marginTop: '-400px' }} >
-        <Backgroundcircles/>
-      </div> */}
+
+        </div>
+        
       </div>  
       </motion.div>
 

@@ -47,12 +47,30 @@ function Subjects({ subjects, chapters, id }) {
               width:" 90%",
               filter: "blur(5px)"
               
-            }}></div>
+            }}>
+              
+            </div>
+            <motion.div className="flex  items-center "  style={{ position: "relative" }}>
+            <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-100px', marginLeft: '10%' }}  >
+          <h2 className="text-center  font-display text-4xl  "><span className="text-[#7F56D9] text-5xl uppercase">S</span>
+          ubjects</h2>
+          <p className="text-gray-700 mt-4  font-display">
+            <span className="text-[#7F56D9] font-bold font-display text-2xl">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+            
+          </p>
+        </div> 
+        </motion.div>
+            
+           
+        <motion.div className=" flex items-center snap-mandatory snap-y ">
+       
 
         
-        
-        <motion.div className=" flex items-center snap-mandatory snap-y ">
         <ul ul className=" list-none p-8  mt-5"style={{ width:2000 }} >
+        <motion.div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "4rem" }} >
             {
                 subjects.map(subject => (
                     <li 
@@ -60,16 +78,16 @@ function Subjects({ subjects, chapters, id }) {
                       onClick={() => toggleMenu(subject.fullname)} 
                       className={` w-42 max-w-auto bg-[#F7F4EA] shadow-2xl opacity-80 rounded-lg my-8 flex items-center`}
                        style = {{Width:"500px", height:"150px"}}>
-                        <div className="flex-1 items-center mr-40 ml-80 justify-center ">
+                        <div className="flex-1 items-center mr-20 ml-20 justify-center ">
                          <h3 className="text-2xl space-y-10  font-bold font-display ">{subject.fullname}</h3>
                        </div>
                     </li>
                 ))
             }
-        
+        </motion.div>
         </ul>
 
-        <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-100px', marginLeft: '10%' }}  >
+        {/* <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-100px', marginLeft: '10%' }}  >
           <h2 className="text-center  font-display text-4xl ml-100 "><span className="text-[#7F56D9] text-5xl uppercase">S</span>
           ubjects</h2>
           <p className="text-gray-700 mt-4  font-display">
@@ -79,7 +97,7 @@ function Subjects({ subjects, chapters, id }) {
             aliquip ex ea commodo consequat.
             
           </p>
-        </div>
+        </div> */}
         {/* <div style={{ position: "relative", left: ' -40%', marginTop: '-300px' }} >
                <Backgroundcircles/>
         </div> */}

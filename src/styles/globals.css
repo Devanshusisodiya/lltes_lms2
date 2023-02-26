@@ -20,6 +20,29 @@
           }
           
           ::-webkit-scrollbar-thumb {
-            background-color: #7F56D9;
+            background-color:lightskyblue;
           }
+          .container {
+            position: relative;
+          }
+        
+          body, ul {
+            margin: 0;
+            padding: 0;
+          }
+          .my-page::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            left: -25% ;
+            width: 98vw; 
+            transform: translateY(-50%);
+            height: 4px;
+            background-color: lightblue;
+          }
+          
+          
+          
+          
 }

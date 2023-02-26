@@ -10,13 +10,8 @@ import Link from 'next/link';
 const Home =() =>{
   return(
 
-    <div className='bg-[#C0B9DD] h-screen'>
-    <div class="w-full bg-white rounded-lg shadow-lg lg:w-1/3">
-      <Navbar/>
-        
-    </div>
-
-    <Link href="/courses"> click kar </Link>
+    <div className=' h-screen'>
+    <Notes/>
     </div>
   )
 }
