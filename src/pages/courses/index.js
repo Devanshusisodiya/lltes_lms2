@@ -47,8 +47,8 @@ function Courses({ courses }) {
         backgroundRepeat: "no-repeat",
         height: "100%",
         width: "90%",
-        opacity:'60%',
-        filter: "blur(1px)"}}>
+        opacity:'90%',
+        filter: "blur(8px)"}}>
       </div>
       {/* till here */}
       <motion.div className="flex  items-center "  style={{ position: "relative" }}> 
