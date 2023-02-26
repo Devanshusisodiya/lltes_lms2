@@ -9,11 +9,15 @@ import Link from 'next/link';
 
 const Home =() =>{
   return(
+
+    <>
     <div class="w-full bg-white rounded-lg shadow-lg lg:w-1/3">
         LOL
         
     </div>
-    
+
+    <Link href="/courses"> click kar </Link>
+    </>
   )
 }
 export default Home ;

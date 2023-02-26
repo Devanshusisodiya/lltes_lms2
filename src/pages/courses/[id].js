@@ -110,7 +110,7 @@ function Subjects({ subjects, chapters, id }) {
                 {chaptersList.map(chapter => (
 
                 
-                  <Link href={`/courses/notes/${chapter.lid}`} key={chapter.lid}>
+                  <Link href={{pathname : `/courses/notes/${chapter.lid}`, query : {lid: 0}}} key={chapter.lid}>
                     <motion.div whileHover={{ scale: 1.1 }}>
                     <li key={chapter.lid} className=" ml-10 text-centre mt-6 opacity-90 h-32 text-center max-w-full my-8 rounded-xl border
                     border-black hover:border-[#F2921D] flex items-center"style={{ minWidth: "800px" }}>
@@ -134,17 +134,6 @@ function Subjects({ subjects, chapters, id }) {
           )
 
           : <div></div>
-
-       
-
-          // <ul>
-          //     {
-          //         chaptersList.map(chapter => (
-          //             <Link href={`/courses/notes/${chapter.lid}`} key={chapter.lid}> <li key={chapter.lid}> {chapter.lesson} </li> </Link>
-          //         ))
-          //     }
-              
-          // </ul> : <h1></h1>
         }
       </motion.div>
 
