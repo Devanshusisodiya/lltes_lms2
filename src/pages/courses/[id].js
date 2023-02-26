@@ -31,7 +31,7 @@ function Subjects({ subjects, chapters, id }) {
     return (
       <>
       <Navbar />
-      <div className="bg-[#e8f1f2] h-screen">
+      <div className="bg-[#C0B9DD] h-screen">
         <div className="mt-10 " style={{
               position: "absolute",
               left:50,
@@ -58,7 +58,7 @@ function Subjects({ subjects, chapters, id }) {
                     <li 
                       key={subject.id} 
                       onClick={() => toggleMenu(subject.fullname)} 
-                      className={` w-42 max-w-auto bg-[#Ffffff] shadow-2xl opacity-80 rounded-lg my-8 flex items-center`}
+                      className={` w-42 max-w-auto bg-[#F7F4EA] shadow-2xl opacity-80 rounded-lg my-8 flex items-center`}
                        style = {{Width:"500px", height:"150px"}}>
                         <div className="flex-1 items-center mr-40 ml-80 justify-center ">
                          <h3 className="text-2xl space-y-10  font-bold font-inter ">{subject.fullname}</h3>
