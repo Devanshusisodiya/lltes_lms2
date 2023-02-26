@@ -61,7 +61,7 @@ function Subjects({ subjects, chapters, id }) {
                       className={` w-42 max-w-auto bg-[#F7F4EA] shadow-2xl opacity-80 rounded-lg my-8 flex items-center`}
                        style = {{Width:"500px", height:"150px"}}>
                         <div className="flex-1 items-center mr-40 ml-80 justify-center ">
-                         <h3 className="text-2xl space-y-10  font-bold font-inter ">{subject.fullname}</h3>
+                         <h3 className="text-2xl space-y-10  font-bold font-display ">{subject.fullname}</h3>
                        </div>
                     </li>
                 ))
@@ -72,31 +72,31 @@ function Subjects({ subjects, chapters, id }) {
         <div className="w-1/2 p-8 mt-16 mx-auto"  style={{ position: "relative", left: '-10%', marginTop: '-100px', marginLeft: '10%' }}  >
           <h2 className="text-center  font-display text-4xl ml-100 "><span className="text-[#7F56D9] text-5xl uppercase">S</span>
           ubjects</h2>
-          <p className="text-gray-700 mt-4  font-inter ">
-            <span className="text-[#7F56D9] font-bold text-2xl">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <p className="text-gray-700 mt-4  font-display">
+            <span className="text-[#7F56D9] font-bold font-display text-2xl">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
             
           </p>
         </div>
-        <div style={{ position: "relative", left: ' -40%', marginTop: '-300px' }} >
+        {/* <div style={{ position: "relative", left: ' -40%', marginTop: '-300px' }} >
                <Backgroundcircles/>
-             </div>
+        </div> */}
         
         {
           
           isOpen ?
           
            (
-            <div className=" mt-10 rounded-xl fixed  border shadow-2xl shadow-transparent  bg-[#e8f1f2] scroll
-            scrollbar-thin scrollbar-track-[#e8f1f2] scrollbar-thumb-[#7F56D9]
+            <div className=" mt-10 rounded-xl fixed  border font-display shadow-2xl shadow-transparent  bg-[#C0B9DD] scroll
+            scrollbar-thin scrollbar-track-[#C0B9DD] scrollbar-thumb-[#7F56D9]
             " style={{ top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
           width: '1000px', height: '550px', overflowY: 'auto'  }}>
             <button 
-                className="mt-4 ml-3 text-md font-bold py-2 px-4  border border-black  rounded text-[#7F56D9] " 
+                className="mt-4 ml-3 text-md font-bold py-2 px-4  border border-[#18435A] rounded text-[#372554] " 
                 onClick={() => setOpen(false)}
               >
                 Back
@@ -106,16 +106,16 @@ function Subjects({ subjects, chapters, id }) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 3 }}
                 exit={{ opacity: 3 }}>
-            <ul className="list-none p-8   mx-4 h-860 w-1440 "  style={{ width: 140 }}>
+            <ul className="list-none p-8    mx-4 h-860 w-1440 "  style={{ width: 140 }}>
                 {chaptersList.map(chapter => (
 
                 
                   <Link href={{pathname : `/courses/notes/${chapter.lid}`, query : {lid: 0}}} key={chapter.lid}>
                     <motion.div whileHover={{ scale: 1.1 }}>
                     <li key={chapter.lid} className=" ml-10 text-centre mt-6 opacity-90 h-32 text-center max-w-full my-8 rounded-xl border
-                    border-black hover:border-[#F2921D] flex items-center"style={{ minWidth: "800px" }}>
+                    border-[#18435A] hover:border-[#335C81] flex items-center"style={{ minWidth: "800px" }}>
                       
-                      <h3 className="text-xl text-[#7F56D9] ml-10 space-y-10 font-inter font-bold">{chapter.lesson}</h3>
+                      <h3 className="text-xl text-[#372554] ml-10 space-y-10 font-display font-extrabold">{chapter.lesson}</h3>
                       
                     </li>
                     </motion.div>

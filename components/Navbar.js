@@ -25,7 +25,7 @@ function Navbar() {
                             </div>
 							<div className="hidden md:block">
 								<div className="ml-10 flex items-baseline space-x-4">
-									<Link href='#Homeo'
+									<Link href='/'
 										className="cursor-pointer text-[#7F56D9] font-semibold px-3 py-2 text-md hover:font-black"
 									>	
 										Home
