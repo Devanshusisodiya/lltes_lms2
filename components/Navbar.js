@@ -39,7 +39,7 @@ function Navbar() {
 									
 
 									<Link
-										href='#services'
+										href='/courses'
 										className="cursor-pointer hover:bg-[#7F56D9] text-black hover:text-white px-3 py-2 rounded-md text-sm font-medium"
 									>
 										Courses

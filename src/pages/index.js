@@ -10,14 +10,14 @@ import Link from 'next/link';
 const Home =() =>{
   return(
 
-    <>
+    <div className='bg-[#C0B9DD] h-screen'>
     <div class="w-full bg-white rounded-lg shadow-lg lg:w-1/3">
-        LOL
+      <Navbar/>
         
     </div>
 
     <Link href="/courses"> click kar </Link>
-    </>
+    </div>
   )
 }
 export default Home ;

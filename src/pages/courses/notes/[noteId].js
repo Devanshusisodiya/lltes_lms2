@@ -3,6 +3,7 @@ import axios from "axios"
 import { useRouter } from "next/router"
 import { useState, useEffect } from "react"
 import Script from "next/script"
+import Navbar from "components/Navbar"
 
 function Notes({ chapters }) {
 
@@ -19,19 +20,19 @@ function Notes({ chapters }) {
 
   
   return(
-    <>
+    <div className="bg-[#C0B9DD] h-screen">
     <Script
         type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
       ></Script>
       <div>
             <div style={{ backgroundColor: 'gray', height: '50px' }}>
-              {/* <Navbar2 /> */}
+              <Navbar/>
             </div>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
         {isSidebarOpen && (
-          <div  className='ml-3 px-3 rounded-xl bg-[#E7DFF9]/60' style={{ height: '1000px', width: '250px', background: '' }}>
+          <div  className='ml-3 mt-5 px-3 rounded-xl bg-[#E7DFF9]/60' style={{ height: '1000px', width: '250px', background: '' }}>
             <button className='mt-3' onClick={handleToggleSidebar}>
-              <img className='h-6 w-6 rounded-full' src='/close.png' alt="Toggle Sidebar" />
+              <img className='h-6 w-6 rounded-full' src='/menu.png' alt="Toggle Sidebar" />
             </button>
             <ul>
         {chapters.map((chapter, index) => (
@@ -55,7 +56,7 @@ function Notes({ chapters }) {
         </div>
       </div>
           </div>
-    </>
+    </div>
   )
 }
 
