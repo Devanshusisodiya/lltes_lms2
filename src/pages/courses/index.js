@@ -56,14 +56,17 @@ function Courses({ courses }) {
         
       
       <div className="  p-3 mt-16 mx-auto" >
-      
-      <h2 className="text-6xl font-display mt-3 text-center"><span className="text-blue-500 uppercase text-8xl  ">
+      <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      >
+      <h2 className="text-6xl font-display text-blue-500 mt-3 text-center"><span className=" uppercase text-6xl  ">
         C</span>
-      <span className="">ourses</span></h2>  
+      <span className="">ourses</span></h2> 
+      </motion.div> 
       <p className="text-gray-700 text-center text-xl font-red mt-2 justify-center max-w-[1000px] mx-auto">
-      <span className="text-blue-500 text-3xl font-display font-semibold">L</span>orem ipsum dolor sit amet, 
-      consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Welcome to Courses, Enjoy the vast content available to the best of your needs. Select your class and then the subject
+      you are interested in and then start your learning journey.
     </p>
       
       <ul className="my-page container list-none p-3  mx-auto z-10 mt-1 space-y-10" style={{ maxWidth: 1000 }}>
